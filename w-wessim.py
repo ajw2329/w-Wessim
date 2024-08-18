@@ -135,7 +135,7 @@ def main(argv):
                 qgapsize = int(values[5])
                 tgapcount = int(values[6])
                 tgapsize = int(values[7])
-                pslid = int(values[9])
+                pslid = values[9]
                 pslscore = int(values[0])
                 pslchrom = values[13]
                 pslstart = values[15]
