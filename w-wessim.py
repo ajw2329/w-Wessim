@@ -231,7 +231,7 @@ def main(argv):
     else:
         RL=ln(readlength)
 
-    mvnTable = readmvnTable(args.mvntable)
+    mvnTable = readmvnTable(args.mvnfile)
     gcVector = getFragmentUniform(referencedict, matchkeys, matchdic, isize, 1000, bind,sequences)
     gcSD = numpy.std(gcVector)
     newSD = isd*2
