@@ -125,7 +125,7 @@ def main(argv):
             while line1:
                 seqid = line1.strip()[1:]
                 values = line2.split("\t")
-                if len(values)<16:
+                if len(values)<17:
                     line1 = f1.readline()
                     line1 = f1.readline()
                     first = True
