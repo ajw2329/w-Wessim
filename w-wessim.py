@@ -123,7 +123,7 @@ def main(argv):
             for i in range(0, 6): ### Ignore first 5 lines of psl file (header)
                 line2 = f2.readline()
             while line1:
-                seqid = int(line1.strip()[1:])
+                seqid = line1.strip()[1:]
                 values = line2.split("\t")
                 if len(values)<16:
                     line1 = f1.readline()
