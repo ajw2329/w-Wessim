@@ -120,7 +120,7 @@ def main(argv):
             totalseq = 1
             first = True
             dirtag = ('','+','-')
-            for i in range(0, 6): ### Ignore first 5 lines of psl file (header)
+            for i in range(0, 5): ### Ignore first 5 lines of psl file (header)
                 line2 = f2.readline()
             while line1:
                 seqid = line1.strip()[1:]
