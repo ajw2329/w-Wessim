@@ -21,6 +21,7 @@ def main(argv):
     group1.add_argument('-R', metavar = 'FILE', dest='reference', required=True, help='faidx-indexed (R)eference genome FASTA file')
     group1.add_argument('-P', metavar = 'FILE', dest='probe', required=True, help='(P)robe sequence FASTA file')
     group1.add_argument('-B', metavar = 'FILE', dest='probeblat', required=True, help='(B)lat matched probe regions .PSL file')
+    group1.add_argument('--mvnfile', type=str, help="Path to mvntable", required=True)
 
     group2 = parser.add_argument_group('Parameters for exome capture')
     group2.add_argument('-f', metavar = 'INT', type=int, dest='fragsize', required=False, help='mean (f)ragment size, corresponding to insert size between paired ends. [200]', default=200)
