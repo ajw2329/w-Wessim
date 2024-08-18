@@ -231,7 +231,7 @@ def main(argv):
     else:
         RL=ln(readlength)
 
-    mvnTable = readmvnTable()
+    mvnTable = readmvnTable(args.mvntable)
     gcVector = getFragmentUniform(referencedict, matchkeys, matchdic, isize, 1000, bind,sequences)
     gcSD = numpy.std(gcVector)
     newSD = isd*2
@@ -777,8 +777,8 @@ def H(l, n, x, u1, u2, mvnpdf):
 	toKeep = v > r
 	return toKeep
 
-def readmvnTable():
-	f = open("lib/mvnTable.txt")
+def readmvnTable(mvn_path):
+	f = open(mvn_path)
 	context = f.read()
 	lines = context.split("\n")
 	mvnTable = []
